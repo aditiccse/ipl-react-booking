@@ -1,0 +1,141 @@
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #7b1e35;
+  color: white;
+  padding: 20px 40px;
+}
+
+.navbar h2 {
+  margin: 0;
+}
+
+.navbar div {
+  display: flex;
+  gap: 25px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #7b1e35, #c94c64);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero a {
+  display: inline-block;
+  background-color: white;
+  color: #7b1e35;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Match Schedule */
+#matches {
+  padding: 40px 30px;
+  text-align: center;
+}
+
+#matches h1 {
+  margin-bottom: 25px;
+}
+
+#matches select {
+  padding: 10px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+}
+
+/* Match Cards - CSS Grid */
+.match-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 25px;
+}
+
+/* Individual Match Card */
+.match-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e5e5;
+}
+
+.match-card h2 {
+  color: #7b1e35;
+  margin-bottom: 15px;
+}
+
+.match-card p {
+  margin: 10px 0;
+}
+
+.match-card button {
+  background-color: #7b1e35;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.match-card button:hover {
+  background-color: #a83250;
+}
+
+/* Tablet Layout */
+@media (max-width: 768px) {
+  .match-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 480px) {
+  .match-container {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar div {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+}
